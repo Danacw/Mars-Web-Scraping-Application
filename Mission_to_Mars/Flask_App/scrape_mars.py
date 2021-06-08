@@ -96,11 +96,11 @@ def facts(browser):
     url = 'https://galaxyfacts-mars.com/'
 
     table_0 = pd.read_html(url)[0]
-    table_0.columns = [' ', 'Mars', 'Earth']
+    columns = table_0.columns = [' ', 'Mars', 'Earth']
     #description = {' ': 'Description', 'Mars': ' ', 'Earth': ' '}
     #table_0.append(description, ignore_index=True)
-    #table_0.set_index('Description', inplace=True)
-    html_table_0 = table_0.to_html(classes="table")
+    table_0.set_index(columns)
+    html_table_0 = table_0.to_html(classes="data table table-striped")
 
     return html_table_0
 
