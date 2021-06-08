@@ -11,5 +11,5 @@ For this challenge, I created a web application that scrapes data on Mars from f
   - MissionToMars.png | A screenshot of my final application.
 
 
-![MissionToMars](https://user-images.githubusercontent.com/26308909/121261112-1dad1080-c867-11eb-8b7c-052536dae140.png)
+![MissionToMars](https://user-images.githubusercontent.com/26308909/121264584-37048b80-c86c-11eb-9e45-281c98daa047.png)
 
