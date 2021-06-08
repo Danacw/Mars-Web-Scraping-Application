@@ -21,7 +21,7 @@ def scrape():
         "news_t": news_t(browser),
         "news_p": news_p(browser),
         "featured_image": featured(browser),
-        "mars_facts": facts(),
+        "mars_facts": facts(browser),
         'mars_hemispheres': hemispheres(browser)
     }
 
@@ -92,11 +92,15 @@ def featured(browser):
 #########################################################
 #Scrape Mars facts table
 
-def facts():
+def facts(browser):
     url = 'https://galaxyfacts-mars.com/'
 
     table_0 = pd.read_html(url)[0]
-    html_table_0 = table_0.to_html()
+    table_0.columns = [' ', 'Mars', 'Earth']
+    #description = {' ': 'Description', 'Mars': ' ', 'Earth': ' '}
+    #table_0.append(description, ignore_index=True)
+    #table_0.set_index('Description', inplace=True)
+    html_table_0 = table_0.to_html(classes="table")
 
     return html_table_0
 
